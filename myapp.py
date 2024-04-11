@@ -2,9 +2,10 @@ import pandas as pd
 
 # Importar base de Dados (database)
 tabela_vendas = pd.read_excel('Vendas.xlsx')
-print(tabela_vendas)
 
 #  Visualização de Database
+pd.set_option('display.max_columns', None) # Exibir sem restrições todas as colunas da base de dados
+print(tabela_vendas)
 
 #  Faturamento por Loja
 
