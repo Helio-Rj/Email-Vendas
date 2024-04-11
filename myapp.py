@@ -19,5 +19,8 @@ quantidade = tabela_vendas[['ID Loja', 'Quantidade']].groupby('ID Loja').sum()
 print(quantidade)
 
 # ‘Ticket’ médio de produtos vendidos por Loja
+# Bloco de comando responsavel por Separar as colunas, agurpar itens repetidos e tirar a média dos valores
+ticket_medio = (faturamento['Valor Final'] / quantidade['Quantidade']).to_frame()
+print(ticket_medio)
 
 # Envio de Email com Relatório
